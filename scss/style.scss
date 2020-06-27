@@ -1,0 +1,223 @@
+@import 'global';
+@import 'header';
+@import 'footer';
+
+main {
+	.section-1 {
+		min-height: 90vh;
+		background-image: linear-gradient(rgba(black, 0.6), transparent),
+			url(/img/landing-page.jpg);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		color: white;
+		h1 {
+			font-size: 4rem;
+		}
+		h3 {
+			padding: 4rem;
+			font-size: 2.4rem;
+			text-align: center;
+		}
+		button {
+			background-color: rgb(76, 110, 151);
+			padding: 1.5rem 4rem;
+			border: none;
+			color: white;
+			transition: background-color 0.4s ease-in-out;
+			&:hover {
+				background-color: rgb(25, 46, 73);
+			}
+		}
+	}
+
+	.section-2 {
+		min-height: 100vh;
+		background-image: linear-gradient(rgba(black, 0.6), transparent),
+			url(/img/new-york-page.png);
+		background-size: cover;
+		background-position: center;
+		position: relative;
+		display: flex;
+		align-items: center;
+		overflow: hidden;
+		.section-2-text {
+			width: 90%;
+			margin: auto;
+			h1 {
+				font-size: 5rem;
+				text-decoration: underline;
+				padding: 1rem 0;
+			}
+			h3 {
+				font-size: 3.5rem;
+				color: rgb(102, 59, 52);
+				font-weight: 400;
+				padding: 5rem 0;
+			}
+		}
+		.cloud-1 {
+			height: 55rem;
+			position: absolute;
+			top: 0;
+			right: 0;
+			animation: cloud-move 3s infinite alternate ease-in-out;
+		}
+		.cloud-2 {
+			height: 50rem;
+			position: absolute;
+			top: 10rem;
+			right: 0;
+			z-index: -1;
+			animation: cloud-move 3s infinite alternate ease-in-out;
+			animation-delay: 0.5s;
+		}
+	}
+	.section-3-text {
+		min-height: 35vh;
+		background-color: rgb(52, 60, 68);
+		color: white;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+
+		h1 {
+			font-size: 5rem;
+		}
+		h2 {
+			font-size: 3.3rem;
+			padding: 2rem 0;
+			line-height: 1.5;
+			font-weight: 400;
+		}
+	}
+	.cards {
+		min-height: 70vh;
+		width: 90%;
+		margin: auto;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		flex-wrap: wrap;
+
+		.card {
+			margin-top: 2rem;
+			min-height: 40vh;
+			flex: 1 1 27rem;
+			margin: 2rem 5rem;
+			text-align: center;
+			box-shadow: 4px 11px 10px -3px rgba(66, 62, 62, 0.75);
+			.card-icon {
+				background-color: rgb(39, 57, 78);
+				img {
+					max-width: 15%;
+					margin: 2rem;
+				}
+			}
+			h1 {
+				font-size: 3rem;
+			}
+			p {
+				font-size: 2rem;
+				padding: 1rem;
+				line-height: 1.5;
+			}
+		}
+	}
+	.section-4 {
+		min-height: 100vh;
+		background-image: linear-gradient(rgba(black, 0.6), transparent),
+			url(/img/contact-mountain.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		form {
+			width: 60%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			font-size: 2rem;
+			color: white;
+			background-color: rgba(19, 28, 39, 0.8);
+			border-radius: 20px;
+			h1 {
+				padding: 4rem;
+				font-size: 4.5rem;
+			}
+			.input-1 {
+				padding: 3rem;
+				h1 {
+					font-size: 4.8rem;
+				}
+
+				label {
+					font-size: 2rem;
+					margin: 0 3rem;
+				}
+				input {
+					padding: 1rem 3rem;
+				}
+			}
+			.input-2 {
+				padding: 3rem;
+				h1 {
+					font-size: 4.8rem;
+				}
+
+				label {
+					font-size: 2rem;
+					margin: 0 3rem;
+				}
+				input {
+					padding: 1rem 3rem;
+				}
+			}
+			button {
+				width: 100%;
+				background-color: rgb(76, 110, 151);
+				border: none;
+				padding: 2rem;
+				margin-top: 8rem;
+				border-bottom-left-radius: 20px;
+				border-bottom-right-radius: 20px;
+				color: white;
+				font-size: 2rem;
+			}
+		}
+	}
+}
+
+@keyframes cloud-move {
+	from {
+		transform: translate(0, 0);
+	}
+	to {
+		transform: translate(10%, -20%);
+	}
+}
+
+@media screen and (max-width: 500px) {
+	html {
+		font-size: 8px;
+	}
+	header {
+		nav {
+			h2 {
+				text-align: center;
+			}
+			ul {
+				text-align: center;
+			}
+		}
+	}
+}

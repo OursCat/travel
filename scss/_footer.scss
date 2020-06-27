@@ -1,0 +1,25 @@
+footer {
+	min-height: 10vh;
+	background-color: rgb(19, 28, 39);
+	.footer {
+		width: 90%;
+		height: 10vh;
+		margin: auto;
+		color: white;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		h1 {
+			flex: 1 1 20rem;
+		}
+		.social-icons {
+			display: flex;
+			justify-content: space-around;
+			flex: 1 1 25rem;
+			img {
+				flex: 1 1 30rem;
+			}
+		}
+	}
+}
